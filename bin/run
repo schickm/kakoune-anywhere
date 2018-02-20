@@ -91,6 +91,8 @@ elif [[ $OSTYPE == "darwin"* ]]; then
     fi;
   fi;
 
+  osascript -e "tell application \"System Events\" to keystroke \"c\" using command down"
+  pbpaste >> $TMPFILE
   $text_editor $TMPFILE
   # todo, fix invalid file
 
