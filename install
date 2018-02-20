@@ -2,11 +2,12 @@
 #
 # vim-anywhere - use Vim whenever, wherever
 # Author: Chris Knadler
-# Homepage: https://www.github.com/cknadler/vim-anywhere
+# Fork: d1egoaz
+# Homepage: https://www.github.com/d1egoaz/vim-anywhere
 #
 # Installs vim-anywhere. Intended for use via curl:
 #
-#   $ curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+#   $ curl -fsSL https://raw.github.com/d1egoaz/vim-anywhere/master/install | bash
 
 set -e
 
@@ -46,7 +47,7 @@ require_one_installed() {
 }
 
 AW_PATH=$HOME/.vim-anywhere
-AW_URL='https://github.com/cknadler/vim-anywhere'
+AW_URL='https://github.com/d1egoaz/vim-anywhere'
 
 ###
 # pre-installation checks

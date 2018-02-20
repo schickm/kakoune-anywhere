@@ -1,7 +1,7 @@
-# vim-anywhere
+# emacs/vim-anywhere
 
-Sometimes, you edit text outside of Vim. These are sad times. Enter
-vim-anywhere!
+Sometimes, you edit text outside of Vim/Emacs. These are sad times. Enter
+emacs/vim-anywhere!
 
 ![demo](assets/demo.gif)
 
@@ -25,7 +25,7 @@ __Linux:__
 #### Install
 
 ```bash
-curl -fsSL https://raw.github.com/cknadler/vim-anywhere/master/install | bash
+curl -fsSL https://raw.github.com/d1egoaz/vim-anywhere/master/install | bash
 ```
 
 __OSX caveat:__ key binding is unbound by default. See [keybinding](#keybinding)
@@ -87,11 +87,11 @@ $ vim $( ls /tmp/vim-anywhere | sort -r | head -n 1 )
 
 ## Why?
 
-I use Vim for _almost_ everything. I wish I didn't have to say _almost_. My
-usual workflow is to open Vim, write, copy the text out of my current buffer
+I use Vim/Emacs for _almost_ everything. I wish I didn't have to say _almost_. My
+usual workflow is to open Vim/Emacs, write, copy the text out of my current buffer
 and paste it into whatever application I was just using. vim-anywhere attempts
 to automate this process as much as possible, reducing the friction of using
-Vim to do more than just edit code.
+Vim/Emacs to do more than just edit code.
 
 ## Contributing
 
