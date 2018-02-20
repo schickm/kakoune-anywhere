@@ -83,12 +83,7 @@ elif [[ $OSTYPE == "darwin"* ]]; then
     "mvim must have been move or uninstalled.\nPlease make sure it is" \
     "available in your path and then reinstall vim-anywhere."
 
-  # if $VISUAL is specified, use that instead of mvim
-  if [ ! -z "$VISUAL" ]; then
-    text_editor="$VISUAL"
-  else
-      text_editor="gvim"
-  fi;
+  text_editor="/usr/local/bin/emacsclient -c"
 
   # copy current selected text (if any) to clipboard
   osascript -e "tell application \"System Events\" to keystroke \"c\" using command down"
