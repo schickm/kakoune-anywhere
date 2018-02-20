@@ -86,7 +86,9 @@ elif [[ $OSTYPE == "darwin"* ]]; then
   text_editor="/usr/local/bin/emacsclient -c"
 
   # copy current selected text (if any) to clipboard
-  osascript -e "tell application \"System Events\" to keystroke \"c\" using command down"
+
+  osascript -e 'tell application "System Events" to set the clipboard to ""'
+  osascript -e 'tell application "System Events" to keystroke "c" using command down'
   pbpaste >> $TMPFILE
   $text_editor $TMPFILE
   # todo, fix invalid file
@@ -98,5 +100,5 @@ elif [[ $OSTYPE == "darwin"* ]]; then
   LANG=en_US.UTF-8 pbcopy < $TMPFILE
   osascript -e "activate application \"$app\""
   # paste the contents of the clipboard
-  osascript -e "tell application \"System Events\" to keystroke \"v\" using command down"
+  osascript -e 'tell application "System Events" to keystroke "v" using command down'
 fi
