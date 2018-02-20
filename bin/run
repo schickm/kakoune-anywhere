@@ -100,5 +100,7 @@ elif [[ $OSTYPE == "darwin"* ]]; then
   # the LANG setting.
   LANG=en_US.UTF-8 pbcopy < $TMPFILE
   osascript -e "activate application \"$app\""
+  # paste the contents of the clipboard
+  osascript -e "tell application \"System Events\" to keystroke \"v\" using command down"
 fi
 
