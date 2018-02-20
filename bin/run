@@ -84,13 +84,13 @@ elif [[ $OSTYPE == "darwin"* ]]; then
     "available in your path and then reinstall vim-anywhere."
 
   # if $VISUAL is specified, use that instead of mvim
-  if [ -e $HOME/.profile ]; then
-    source $HOME/.profile
-    if env | grep -q "VISUAL"; then
-        text_editor="$VISUAL"
-    fi;
+  if [ ! -z "$VISUAL" ]; then
+    text_editor="$VISUAL"
+  else
+      text_editor="gvim"
   fi;
 
+  # copy current selected text (if any) to clipboard
   osascript -e "tell application \"System Events\" to keystroke \"c\" using command down"
   pbpaste >> $TMPFILE
   $text_editor $TMPFILE
@@ -105,4 +105,3 @@ elif [[ $OSTYPE == "darwin"* ]]; then
   # paste the contents of the clipboard
   osascript -e "tell application \"System Events\" to keystroke \"v\" using command down"
 fi
-
