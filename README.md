@@ -1,4 +1,3 @@
-
 # Emacs-anywhere
 
 
@@ -11,6 +10,7 @@ See upstream readme in https://github.com/cknadler/vim-anywhere/blob/master/READ
 - Copies to clipboard current selected text (if any), if there are not selected text it clears up the clipboard
 - Paste new edited text back into the original application
 
+![demo](assets/demo.gif)
 
 ### Install
 
