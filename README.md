@@ -15,17 +15,17 @@ See upstream readme in https://github.com/cknadler/vim-anywhere/blob/master/READ
 ### Install
 
 ```
-curl -fsSL https://raw.github.com/d1egoaz/vim-anywhere/master/install | bash
+curl -fsSL https://raw.github.com/d1egoaz/kakoune-anywhere/master/install | bash
 ```
 
 * OSX caveat:* key binding is unbound by default. See keybinding for details.
 
 Update
 ```
-~/.vim-anywhere/update
+~/.kakoune-anywhere/update
 ```
 
 Uninstall
 ```
-~/.vim-anywhere/uninstall
+~/.kakoune-anywhere/uninstall
 ```

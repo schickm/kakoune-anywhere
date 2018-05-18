@@ -1,11 +1,11 @@
 #!/bin/bash
 #
-# vim-anywhere - use Vim whenever, wherever
+# kakoune-anywhere - use Vim whenever, wherever
 # Author: Chris Knadler
 # Fork: d1egoaz
-# Homepage: https://www.github.com/d1egoaz/vim-anywhere
+# Homepage: https://www.github.com/d1egoaz/kakoune-anywhere
 #
-# Uninstalls vim-anywhere
+# Uninstalls kakoune-anywhere
 
 set -e
 
@@ -26,8 +26,8 @@ done
 
 check_installed() { hash $1 &> /dev/null; }
 
-AW_PATH=$HOME/.vim-anywhere
-DOC_PATH=/tmp/vim-anywhere
+AW_PATH=$HOME/.kakoune-anywhere
+DOC_PATH=/tmp/kakoune-anywhere
 
 ###
 # uninstall
@@ -38,14 +38,14 @@ rm -rf $AW_PATH $DOC_PATH
 # Linux uninstall
 if [[ $OSTYPE == "linux-gnu" ]]; then
   if check_installed gconftool; then
-    kbd_path=/desktop/gnome/keybindings/vim-anywhere
+    kbd_path=/desktop/gnome/keybindings/kakoune-anywhere
     gconftool --unset $kbd_path/name
     gconftool --unset $kbd_path/binding
     gconftool --unset $kbd_path/action
 
   else # gsettings must be installed
     custom_kbd=org.gnome.settings-daemon.plugins.media-keys.custom-keybinding
-    kbd_path=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/vim-anywhere/
+    kbd_path=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/kakoune-anywhere/
     gsettings reset-recursively $custom_kbd:$kbd_path
   fi
 
@@ -54,4 +54,4 @@ elif [[ $OSTYPE == "darwin"* ]]; then
   rm -rf $HOME/Library/Services/KakouneAnywhere.workflow
 fi
 
-echo "vim-anywhere has been successfully uninstalled!"
+echo "kakoune-anywhere has been successfully uninstalled!"

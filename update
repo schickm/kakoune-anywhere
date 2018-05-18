@@ -1,10 +1,10 @@
 #!/bin/bash
 #
-# vim-anywhere - use Vim whenever, wherever
+# kakoune-anywhere - use Vim whenever, wherever
 # Author: Chris Knadler
-# Homepage: https://www.github.com/cknadler/vim-anywhere
+# Homepage: https://www.github.com/cknadler/kakoune-anywhere
 #
-# Updates vim-anywhere
+# Updates kakoune-anywhere
 
 set -e
 
@@ -25,14 +25,14 @@ done
 
 err() { echo -e "$@" 1>&2; }
 
-AW_PATH=$HOME/.vim-anywhere
+AW_PATH=$HOME/.kakoune-anywhere
 
 ###
 # update
 ###
 
 if [ ! -d $AW_PATH ]; then
-  err "vim-anywhere doesn't seem to be installed."
+  err "kakoune-anywhere doesn't seem to be installed."
   exit 1
 fi
 
@@ -51,4 +51,4 @@ if [[ $OSTYPE == "darwin"* ]]; then
   cp -R $AW_PATH/KakouneAnywhere.workflow $HOME/Library/Services
 fi
 
-echo "vim-anywhere has been successfully updated!"
+echo "kakoune-anywhere has been successfully updated!"

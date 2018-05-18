@@ -1,9 +1,9 @@
 #!/bin/bash
 #
-# vim-anywhere - use Vim whenever, wherever
+# kakoune-anywhere - use Vim whenever, wherever
 # Author: Chris Knadler
 # Fork: d1egoaz
-# Homepage: https://www.github.com/d1egoaz/vim-anywhere
+# Homepage: https://www.github.com/d1egoaz/kakoune-anywhere
 #
 # Open a temporary file with Vim. Once Vim is closed, copy the contents of that
 # file to the system clipboard.
@@ -35,8 +35,8 @@ done
 ###
 # run
 ###
-AW_PATH=$HOME/.vim-anywhere
-TMPFILE_DIR=/tmp/vim-anywhere
+AW_PATH=$HOME/.kakoune-anywhere
+TMPFILE_DIR=/tmp/kakoune-anywhere
 TMPFILE=$TMPFILE_DIR/doc-$(date +"%y%m%d%H%M%S")
 VIM_OPTS=--nofork
 
@@ -73,7 +73,7 @@ if [[ $OSTYPE == "linux-gnu" ]]; then
 elif [[ $OSTYPE == "darwin"* ]]; then
   # if there is no path file, it must have been deleted or the installer failed
   require_file_exists $AW_PATH/.path \
-    "Please reinstall vim-anywhere."
+    "Please reinstall kakoune-anywhere."
 
   app=$(osascript $AW_PATH/script/current_app.scpt)
   mvim_path=$(cat $AW_PATH/.path)
@@ -81,7 +81,7 @@ elif [[ $OSTYPE == "darwin"* ]]; then
 
   require_file_exists $mvim_path \
     "mvim must have been move or uninstalled.\nPlease make sure it is" \
-    "available in your path and then reinstall vim-anywhere."
+    "available in your path and then reinstall kakoune-anywhere."
 
   text_editor="/usr/local/bin/emacsclient -c"
 

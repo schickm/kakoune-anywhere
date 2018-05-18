@@ -1,7 +1,7 @@
--- vim-anywhere - use Vim whenever, wherever
+-- kakoune-anywhere - use Vim whenever, wherever
 -- Author: Chris Knadler
 -- Fork: d1egoaz
--- Homepage: https://www.github.com/d1egoaz/vim-anywhere
+-- Homepage: https://www.github.com/d1egoaz/kakoune-anywhere
 --
 -- Get the current application's name
 
