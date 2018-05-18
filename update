@@ -48,7 +48,7 @@ popd
 
 # OSX only
 if [[ $OSTYPE == "darwin"* ]]; then
-  cp -R $AW_PATH/VimAnywhere.workflow $HOME/Library/Services
+  cp -R $AW_PATH/KakouneAnywhere.workflow $HOME/Library/Services
 fi
 
 echo "vim-anywhere has been successfully updated!"
